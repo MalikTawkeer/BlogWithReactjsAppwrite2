@@ -4,7 +4,7 @@ import Container from "./container/Container.jsx";
 import Logo from "./Logo.jsx";
 import LogoutBtn from "./header/LogoutBtn.jsx";
 import Login from "./Login.jsx";
-import Input from "./input.jsx";
+import Input from "./Input.jsx";
 import PostCard from "./PostCard.jsx";
 import Select from "./Select.jsx";
 import Button from "./Button.jsx";
