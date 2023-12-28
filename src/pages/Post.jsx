@@ -39,17 +39,17 @@ function Post() {
           <img
             src={service.getFilePreview(post.featuredImage)}
             alt={post.title}
-            className=" rounded-xl w-1/3"
+            className=" rounded-xl w-1/2"
           />
 
           {isAuthor && (
             <div className=" absolute right-6 top-6">
               <Link to={`/edit-post/${post.$id}`}>
-                <Button bgColor="bg-green-500" className=" mr-3 font-bold hover:bg-slate-500">
+                <Button bgColor="bg-green-500" className=" mr-3 font-bold">
                   Edit
                 </Button>
               </Link>
-              <Button bgColor="bg-red-500" onClick={deletePost} className=" hover: bg-slate-500">
+              <Button bgColor="bg-red-500" onClick={deletePost}>
                 Delete
               </Button>
             </div>
