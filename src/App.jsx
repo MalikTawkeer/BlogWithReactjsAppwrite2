@@ -1,4 +1,4 @@
-import conf from "./conf/conf";
+
 import "./App.css";
 import { useDispatch } from "react-redux";
 import { login, logout } from "./store/authSlice";
@@ -28,7 +28,7 @@ function App() {
   return !loading ? (
     <div
       className="min-h-screen flex flex-wrap
-   content-between bg-gray-400"
+   content-between"
     >
       <div className="w-full block">
         <Header />

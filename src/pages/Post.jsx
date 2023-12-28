@@ -11,6 +11,7 @@ function Post() {
   const { slug } = useParams();
   const userData = useSelector((state) => state.auth.userData);
   const isAuthor = post && userData ? post.userId === userData.$id : false;
+  console.log(isAuthor);
 
   useEffect(() => {
     if (slug) {
@@ -45,11 +46,11 @@ function Post() {
           {isAuthor && (
             <div className=" absolute right-6 top-6">
               <Link to={`/edit-post/${post.$id}`}>
-                <Button bgColor="bg-green-500" className=" mr-3 font-bold">
+                <Button bgColor="bg-green-500" className=" mr-3 font-bold hover:bg-green-400">
                   Edit
                 </Button>
               </Link>
-              <Button bgColor="bg-red-500" onClick={deletePost}>
+              <Button bgColor="bg-red-500" onClick={deletePost} className="font-bold hover:bg-red-400">
                 Delete
               </Button>
             </div>
