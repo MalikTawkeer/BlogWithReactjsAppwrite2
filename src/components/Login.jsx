@@ -85,8 +85,8 @@ function Login() {
                 required: true,
               })}
             />
-            <Button type="submit" className="w-full">
-              Signin
+            <Button type="submit" className="w-full text-white hover:bg-gray-400 hover:text-black font-bold">
+              Sign In
             </Button>
           </div>
         </form>
