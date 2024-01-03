@@ -5,20 +5,28 @@ import { useState, useEffect } from 'react'
 
 function AllPosts() {
     const [posts, setPosts] = useState([])
+    const [loader, setLoader] = useState(false)
+
 
     useEffect(()=>{
-        service.getPosts()
-         .then((posts)=>{
-            if(posts){
-                setPosts(posts.documents)
-            }
-         })
-         .catch((err)=>{console.log(err);})
+      (async ()=>{
+        try {
+          setLoader(true)
+          const res = await service.getPosts([])
+          if(posts) setPosts(res.documents)
+          setLoader(false)
+        } catch (error) {
+          console.log(error);
+          setLoader(false)
+        }
+        }) ()
     }, [])
+
     
   return (
     <div className=' w-full py-8'>
         <Container>
+          {loader && <h1><strong>Loading...</strong></h1>}
             <div className='flex flex-wrap justify-center'>
                 {
                   
