@@ -35,22 +35,20 @@ function Header() {
   ];
 
   return (
-    <header className=" rounded-t-lg py-2 shadow-lg bg-teal-700  sticky top-0 px-3 z-50">
+    <header className=" rounded-sm py-2 bg-gray-400 sticky top-0 px-3 z-50 shadow-xl">
       <Container>
-        <nav className="felx">
-          <div className="mr-4 text-start ">
-            <Link to="/">
-              <Logo width="70px" />
-            </Link>
-          </div>
-          <ul className="flex justify-end ml-auto text-white">
+        <nav className="flex justify-between items-center">
+          <Link to="/">
+            <Logo />
+          </Link>
+          <ul className="flex flex-wrap ml-auto text-neutral-800 font-bold text-1xl">
             {navItems.map((item) =>
               item.active ? (
                 <li key={item.name}>
                   <button
                     onClick={() => navigate(item.slug)}
                     className="inline-block px-6 py-2
-                 duration-200 hover:bg-blue-200 rounded-full"
+                 duration-200 hover:bg-blue-200 rounded-full hover:text-black hover:font-semibold"
                   >
                     {item.name}
                   </button>
