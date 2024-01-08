@@ -6,12 +6,12 @@ function PostCard({$id, title, featuredImage}) {
   console.log($id, title ,featuredImage);
   return (
     <Link to={`/post/${$id}`}>
-        <div className='w-full bg-gray-300 rounded-lg p-4'>
-            <div className='w-full justify-center mb-4'>
+        <div className=' bg-white shadow-md rounded-lg p-4 hover:shadow-lg'>
+            <div className=' justify-center mb-4'>
                 <img src={service.getFilePreview(featuredImage)} alt={title} 
                 className=' rounded-xl'/>
             </div>
-            <h2 className=' text-xl font-bold'>{title}</h2>
+            <h2 className=' font-bold md:text-xl'>{title}</h2>
         </div>
     </Link>
   )
