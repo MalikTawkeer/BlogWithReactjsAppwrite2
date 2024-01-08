@@ -41,7 +41,7 @@ function Post() {
             <img
               src={service.getFilePreview(post.featuredImage)}
               alt={post.title}
-              className=" rounded-xl w-1/2"
+              className=" rounded-xl w-1/2 md:w-full"
             />
           </div>
 
